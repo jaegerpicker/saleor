@@ -48,7 +48,8 @@
     "underscore": "^1.8.3",
     "webpack": "^1.12.2",
     "webpack-bundle-tracker": "0.0.93",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "snyk": "^1.189.0"
   },
   "babel": {
     "presets": [
@@ -60,6 +61,9 @@
   "scripts": {
     "build-assets": "UV_THREADPOOL_SIZE=8 webpack -p --progress",
     "heroku-postbuild": "npm run build-assets",
-    "start": "UV_THREADPOOL_SIZE=8 webpack -d --watch"
-  }
+    "start": "UV_THREADPOOL_SIZE=8 webpack -d --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
