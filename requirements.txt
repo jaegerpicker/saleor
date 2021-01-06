@@ -42,7 +42,7 @@ maxminddb-geolite2==2015.708
 maxminddb==1.2.1
 mock==2.0.0
 pbr==1.10.0               # via mock
-Pillow==3.3.0             # via django-versatileimagefield
+Pillow==8.1.0             # via django-versatileimagefield
 premailer==3.0.1          # via django-emailit
 prices==0.5.8
 psycopg2==2.6.2
